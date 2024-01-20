@@ -161,6 +161,11 @@ button{
     border-radius: 30px;
     border: #000000 solid ;
 }
+button:hover{
+    background-color: aqua;
+    padding: 30px 90px;
+    animation: 5ms;
+}
 .or{
     align-self: center;
     padding: auto;

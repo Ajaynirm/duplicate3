@@ -9,6 +9,7 @@ const app=express();
 const port=3000;
 
 
+
 app.use(morgan("short"));
 app.use(bodyParser.urlencoded( { extended : true }));
 app.use((req,res,next) => {
@@ -19,7 +20,7 @@ app.use((req,res,next) => {
 app.use(express.static('public'));
 
 app.get("/", (req,res) => {
-    res.sendFile( __dirname + "/public/login.html");
+    res.sendFile( __dirname + "/public/index.html");
    
     
 });
@@ -39,3 +40,5 @@ app.get("/submit", (req,res) => {
 app.listen(port, () => {
     console.log("listening on port:" + port);
 });
+
+
