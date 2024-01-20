@@ -174,5 +174,17 @@ h2{
     text-align: end;
 }
 
+@media screen and (max-width: 700px){
+    .logo-child{
+        text-align: center;
+    }
+    .head-child{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+}
+
 
 

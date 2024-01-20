@@ -17,13 +17,25 @@ app.use((req,res,next) => {
     next();
 });
 
-app.use(express.static('public'));
+app.use(express.static('public' , {type:"module"}));
+
 
 app.get("/", (req,res) => {
     res.sendFile( __dirname + "/public/index.html");
-   
-    
 });
+
+app.get("/google/signup", (req,res) => {
+    res.sendFile(__dirname + "/logins/google.html");
+})
+app.get("/apple/signup", (req,res) => {
+    res.sendFile(__dirname + "/logins/apple.html");
+})
+app.get("/create/new/signup", (req,res) => {
+    res.sendFile(__dirname + "/logins/create.html");
+})
+
+
+
 app.post("/submit", (req,res) => {
     console.log(req.body);  
 });
